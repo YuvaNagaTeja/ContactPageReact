@@ -1,25 +1,68 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+// import { ContactPg } from './Components/ContactPg';
+// import { Submit } from './Components/Submit/Submit'
+import { BrowserRouter as Router} from "react-router-dom";
+// import React, { useState, useEffect } from 'react';
+// import ClipLoader from "react-spinners/ClipLoader";
+import ContactPg from './Components/ContactPg';
+
+
+// function AppRoutes() {
+
+//   const routes = useRoutes(
+//     [
+//       {
+//         path: '/',
+//         element: <ContactPg />
+//       },
+
+//       {
+//         path: '/submit',
+//         element: <Submit />
+//       },
+//     ]
+//   )
+
+//   return routes;
+// }
 
 function App() {
+
+  // const [loading, setloading] = useState(false)
+
+  // useEffect(() => {
+  //   setloading(true)
+
+  //   setTimeout(() => {
+  //     setloading(false)
+  //   }, 2000)
+  // }, [])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    // <div>
+
+    //   {
+    //     loading ?
+    //       <ClipLoader
+    //         color={'orange'}
+    //         loading={loading}
+    //         size={30}
+    //         aria-label="Loading Spinner"
+    //         data-testid="loader"
+    //       />
+    //       :
+    <Router>
+      {/* <AppRoutes /> */}
+      {/* <Submit /> */}
+      
+      <ContactPg/>
+      {/* <Submit/> */}
+    </Router >
+    //   }
+    // </div>
+  )
 }
 
 export default App;
